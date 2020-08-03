@@ -1,0 +1,57 @@
+// ID of the cluster.
+cluster_id = "cluster"
+
+// Domain of the cluster. This should be "${cluster_id}.${base_domain}".
+cluster_domain = "cluster.example.com"
+
+// Base domain from which the cluster domain is a subdomain.
+base_domain = "example.com"
+
+// Name of the vSphere server.
+vsphere_server = "vsphere.example.com"
+
+// User on the vSphere server.
+vsphere_user = "username"
+
+// Password of the user on the vSphere server.
+vsphere_password = "password"
+
+// Name of the vSphere cluster.
+vsphere_cluster = "devel"
+
+// Name of the vSphere data center.
+vsphere_datacenter = "dc1"
+
+// Name of the vSphere data store to use for the VMs.
+vsphere_datastore = "datastore1"
+
+// Name of the VM template to clone to create VMs for the cluster.
+#vm_template = "rhcos-latest"
+
+// Name of the network
+#vm_network = ""VM Network""
+
+// DNS addresses
+vm_dns_addresses = ["192.168.0.1"]
+
+// The machine_cidr where IP addresses will be assigned for cluster nodes.
+machine_cidr = "192.168.1.0/24"
+
+// The IP address to assign to the bootstrap VM.
+bootstrap_ip_address = "192.168.1.19"
+
+// The IP addresses to assign to the control plane VMs.
+control_plane_ip_addresses = ["192.168.1.20", "192.168.1.21", "192.168.1.22"]
+
+// The IP addresses to assign to the infra and compute VMs
+#infra_ip_addresses = []
+compute_ip_addresses = ["192.168.1.30", "192.168.1.31"]
+
+// Ignition config path for the bootstrap machine
+#bootstrap_ignition_path = "./bootstrap.ign"
+
+// Ignition config path for the control plane machines
+#control_plane_ignition_path = "./master.ign"
+
+// Ignition config path for the infra and compute machines
+#compute_ignition_path = "./worker.ign"
